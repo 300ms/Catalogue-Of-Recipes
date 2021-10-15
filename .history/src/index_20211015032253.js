@@ -18,7 +18,7 @@ mealResponses.forEach((response) => {
   randomMeals.push(response.meals[0]);
 });
 
-const store = createStore(rootReducer, { meals: randomMeals });
+const store = createStore(rootReducer, { meals: mealList });
 
 ReactDOM.render(
   <Provider store={store}>

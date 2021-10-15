@@ -8,17 +8,14 @@ import './index.css';
 import { getRandomMeal } from './Requests/MealsApiRequests';
 
 const allPromises = [];
-const randomMeals = [];
+
 for (let i = 0; i < 10; i += 1) {
   allPromises.push(getRandomMeal);
 }
 
-const mealResponses = await Promise.all(allPromises);
-mealResponses.forEach((response) => {
-  randomMeals.push(response.meals[0]);
-});
+const mealList = await Promise.all(allPromises);
 
-const store = createStore(rootReducer, { meals: randomMeals });
+const store = createStore(rootReducer, { meals: mealList });
 
 ReactDOM.render(
   <Provider store={store}>
