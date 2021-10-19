@@ -13,7 +13,7 @@ const recipes = (state = {}, action) => {
     case RECIPE_DETAILS:
       return {
         ...state,
-        recipeDetails: action.payload,
+        detailMeal: action.payload,
       };
 
     case CATEGORIES:

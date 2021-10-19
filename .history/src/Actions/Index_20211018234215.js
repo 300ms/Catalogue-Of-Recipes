@@ -18,8 +18,8 @@ const categories = () => (dispatch) => {
   return () => abortCont.abort();
 };
 
-const searchRecipeByID = (recipeID) => (dispatch) => {
-  getByID(recipeID)
+const searchRecipeByID = (mealID) => (dispatch) => {
+  getByID(mealID)
     .then((response) => dispatch({
       type: RECIPE_DETAILS,
       payload: response.data.meals,

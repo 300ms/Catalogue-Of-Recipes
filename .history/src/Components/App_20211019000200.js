@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import CategoryFilter from './CategoryFilter';
-import Recipes from './Recipes';
 import {
   categories, searchRecipeByID, categoryRecipes,
 } from '../Actions/Index';
+import CategoryFilter from './CategoryFilter';
+import Recipe from './Recipe';
 
 function App({
   categories, searchRecipeByID, categoryRecipes, recipes,
@@ -41,7 +41,7 @@ function App({
       </form>
 
       <CategoryFilter handleClick={handleClick} />
-      <Recipes recipes={recipes} clickOnDetailMeal={clickOnRecipeDetail} />
+      <Recipe recipes={recipes} clickOnDetailMeal={clickOnRecipeDetail} />
     </main>
   );
 }

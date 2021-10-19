@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import CategoryFilter from './CategoryFilter';
-import Recipes from './Recipes';
 import {
   categories, searchRecipeByID, categoryRecipes,
 } from '../Actions/Index';
+// import Categories from '../presentation/Categories';
+import Recipe from './Recipe';
 
 function App({
   categories, searchRecipeByID, categoryRecipes, recipes,
@@ -19,7 +19,7 @@ function App({
     categoryRecipes(e);
   };
 
-  const clickOnRecipeDetail = (e) => {
+  const clickOnDetailMeal = (e) => {
     searchRecipeByID(e);
   };
 
@@ -40,18 +40,18 @@ function App({
         </button>
       </form>
 
-      <CategoryFilter handleClick={handleClick} />
-      <Recipes recipes={recipes} clickOnDetailMeal={clickOnRecipeDetail} />
+      <Categories handleClick={handleClick} />
+      <Recipe meals={recipes} clickOnDetailMeal={clickOnDetailMeal} />
     </main>
   );
 }
 
 const mapStateToProps = (state) => ({
-  recipes: state.recipes,
+  meals: state.meals.meals,
 });
 
 export default connect(mapStateToProps, {
-  categoryRecipes, categories, searchRecipeByID, /* fetchByIngridient, fetchByArea, */
+  fetchMeals, fetchCategories: categories, fetchDetailMeal, /* fetchByIngridient, fetchByArea, */
 })(App);
 
 App.propTypes = {

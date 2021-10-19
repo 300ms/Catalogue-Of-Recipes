@@ -1,6 +1,4 @@
-import {
-  RECIPES, RECIPE_DETAILS, CATEGORIES, RECIPE_BY_NAME,
-} from '../actions/types';
+import { RECIPES, RECIPE_DETAILS, CATEGORIES } from '../actions/types';
 
 const recipes = (state = {}, action) => {
   switch (action.type) {
@@ -13,7 +11,7 @@ const recipes = (state = {}, action) => {
     case RECIPE_DETAILS:
       return {
         ...state,
-        recipeDetails: action.payload,
+        detailMeal: action.payload,
       };
 
     case CATEGORIES:
@@ -21,13 +19,6 @@ const recipes = (state = {}, action) => {
         ...state,
         categories: action.payload,
       };
-
-    case RECIPE_BY_NAME:
-      return {
-        ...state,
-        searchedItems: action.payload,
-      };
-
     default:
       return state;
   }

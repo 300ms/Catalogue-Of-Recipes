@@ -18,15 +18,15 @@ const categories = () => (dispatch) => {
   return () => abortCont.abort();
 };
 
-const searchRecipeByID = (recipeID) => (dispatch) => {
-  getByID(recipeID)
+const searchMeal = (mealID) => (dispatch) => {
+  getByID(mealID)
     .then((response) => dispatch({
       type: RECIPE_DETAILS,
       payload: response.data.meals,
     }));
 };
 
-const categoryRecipes = (category) => (dispatch) => {
+const categoryMeals = (category) => (dispatch) => {
   getByCategory(category)
     .then((response) => dispatch({
       type: RECIPES,
@@ -40,5 +40,5 @@ const changeFilter = (filter) => ({
 });
 
 export {
-  categories, searchRecipeByID, categoryRecipes, changeFilter,
+  categories, searchMeal, categoryMeals, changeFilter,
 };

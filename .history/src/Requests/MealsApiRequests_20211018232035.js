@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const getCategories = () => axios.get('www.themealdb.com/api/json/v1/1/categories.php');
 const getByCategory = (category) => axios.get(`www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
-const getByID = (ID) => axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${ID}`);
+const getByID = (name) => axios.get(`www.themealdb.com/api/json/v1/1/search.php?s=${name}`);
 const getRandomMeal = () => axios.get('www.themealdb.com/api/json/v1/1/random.php');
 
 const getAllMeals = (categories) => {
