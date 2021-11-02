@@ -7,7 +7,7 @@ const recipes = (state = {}, action) => {
     case RECIPES:
       return {
         ...state,
-        recipes: action.payload,
+        meals: action.payload,
       };
 
     default:

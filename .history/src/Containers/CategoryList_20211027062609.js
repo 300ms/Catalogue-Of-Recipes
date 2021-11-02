@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const CategoryList = ({ state, handleClick }) => {
-  const { categories } = state;
+  console.log(state);
+  const { categories } = state.categories;
   return (
     categories.map((category) => (
       <button type="button" onClick={() => handleClick(category.strCategory)} key={category.idCategory} className="cat-item">

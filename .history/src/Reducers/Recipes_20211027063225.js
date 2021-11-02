@@ -1,5 +1,5 @@
 import {
-  RECIPES,
+  RECIPES, RECIPE_BY_NAME,
 } from '../Actions/Types';
 
 const recipes = (state = {}, action) => {
@@ -7,7 +7,13 @@ const recipes = (state = {}, action) => {
     case RECIPES:
       return {
         ...state,
-        recipes: action.payload,
+        meals: action.payload,
+      };
+
+    case RECIPE_BY_NAME:
+      return {
+        ...state,
+        searchedItems: action.payload,
       };
 
     default:

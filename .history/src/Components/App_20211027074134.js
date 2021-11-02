@@ -7,8 +7,9 @@ import {
   categories, searchRecipeByID, categoryRecipes,
 } from '../Actions/Index';
 
-function App({ state }) {
-  const { recipes } = state;
+function App({
+  categories, searchRecipeByID, categoryRecipes, recipes,
+}) {
   useEffect(() => {
     categoryRecipes('Beef');
     categories();
@@ -46,7 +47,7 @@ function App({ state }) {
 }
 
 const mapStateToProps = (state) => ({
-  state,
+  recipes: state.recipes,
 });
 
 export default connect(mapStateToProps, {
@@ -54,5 +55,10 @@ export default connect(mapStateToProps, {
 })(App);
 
 App.propTypes = {
-  state: PropTypes.instanceOf(Object).isRequired,
+  recipes: PropTypes.instanceOf(Array).isRequired,
+  categoryRecipes: PropTypes.func.isRequired,
+  categories: PropTypes.func.isRequired,
+  searchRecipeByID: PropTypes.func.isRequired,
+  // fetchByIngridient: PropTypes.func.isRequired,
+  // fetchByArea: PropTypes.func.isRequired,
 };

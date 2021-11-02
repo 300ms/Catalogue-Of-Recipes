@@ -1,6 +1,8 @@
-import { CATEGORIES } from '../Actions/Types';
+import {
+  CATEGORIES,
+} from '../Actions/Types';
 
-const filter = (state = [], action) => {
+const categories = (state = {}, action) => {
   switch (action.type) {
     case CATEGORIES:
       return {
@@ -13,4 +15,4 @@ const filter = (state = [], action) => {
   }
 };
 
-export default filter;
+export default categories;

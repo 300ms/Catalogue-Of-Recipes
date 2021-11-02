@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const RecipeList = ({ state, clickOnRecipeDetail }) => {
-  console.log(state);
   const { recipes } = state;
   return (
     recipes.map((recipe) => (
