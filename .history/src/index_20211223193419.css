@@ -5,10 +5,13 @@
 .category-list-container {
   width: 100%;
   display: flex;
+  flex-wrap: row;
 }
 
 .cat-item {
-  margin: 10px;
+  max-height: 100px;
+  max-width: 100px;
+  margin: 10px 20px;
 }
 
 .meal-container {

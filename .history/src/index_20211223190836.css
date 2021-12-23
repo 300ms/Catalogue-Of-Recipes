@@ -1,0 +1,14 @@
+#root {
+  width: 100vw;
+}
+
+.category {
+  width: 400px;
+  max-width: 400px;
+}
+
+.cat-item {
+  height: 400px;
+  max-height: 400px;
+  margin: 10px 20px;
+}

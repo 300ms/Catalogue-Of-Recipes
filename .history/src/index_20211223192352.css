@@ -1,0 +1,28 @@
+#root {
+  width: 100vw;
+}
+
+.category {
+  width: 400px;
+  max-width: 400px;
+}
+
+.cat-item {
+  min-height: 400px;
+  height: 400px;
+  max-height: 400px;
+  margin: 10px 20px;
+}
+
+.img-container {
+  width: 300px;
+  max-width: 300px;
+}
+
+.img-container img {
+  max-width: 300px;
+}
+
+.meal-container {
+  flex-wrap: row;
+}

@@ -5,10 +5,7 @@
 .category-list-container {
   width: 100%;
   display: flex;
-}
-
-.cat-item {
-  margin: 10px;
+  flex-wrap: row;
 }
 
 .meal-container {

@@ -1,0 +1,12 @@
+#root {
+  width: 100vw;
+}
+
+.category {
+  width: fit-content;
+  max-width: 400px;
+}
+
+.cat-item {
+  margin: 0 20px;
+}

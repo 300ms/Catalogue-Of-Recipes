@@ -5,6 +5,7 @@
 .category-list-container {
   width: 100%;
   display: flex;
+  flex-wrap: row;
 }
 
 .cat-item {

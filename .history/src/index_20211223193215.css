@@ -2,13 +2,16 @@
   width: 100vw;
 }
 
-.category-list-container {
-  width: 100%;
-  display: flex;
+.category {
+  width: 100px;
+  max-width: 100px;
 }
 
 .cat-item {
-  margin: 10px;
+  min-height: 400px;
+  height: 400px;
+  max-height: 400px;
+  margin: 10px 20px;
 }
 
 .meal-container {

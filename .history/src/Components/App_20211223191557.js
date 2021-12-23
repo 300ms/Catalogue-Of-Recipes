@@ -24,8 +24,10 @@ function App({ state }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const inputValue = e.target[0].value;
-    searchRecipeByID(inputValue);
+    // const inputValue = e.target[0].value;
+
+    // fetchByIngridient(inputValue);
+    // fetchByArea(inputValue);
   };
 
   return (
