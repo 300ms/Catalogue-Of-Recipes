@@ -37,8 +37,8 @@ function App({ state }) {
         </button>
       </form>
 
-      <CategoryFilter handleClick={(e) => handleClick(e)} />
-      <Recipes recipes={recipes} clickOnRecipeDetail={(e) => clickOnRecipeDetail(e)} />
+      <CategoryFilter handleClick={handleClick} />
+      <Recipes recipes={recipes} clickOnRecipeDetail={clickOnRecipeDetail} />
     </main>
   );
 }
@@ -46,11 +46,6 @@ function App({ state }) {
 const mapStateToProps = (state) => ({
   state,
 });
-
-// const mapDispatchToProps = (dispatch) => ({
-//   handleClick: () => dispatch(categoryRecipes()),
-//   clickOnRecipeDetail: () => dispatch(searchRecipeByID()),
-// });
 
 export default connect(mapStateToProps, {
   categoryRecipes, categories, searchRecipeByID, /* fetchByIngridient, fetchByArea, */

@@ -8,6 +8,10 @@ const CategoryList = ({ state, handleClick }) => {
       <button type="button" onClick={() => handleClick(category.strCategory)} key={category.idCategory} className="cat-item">
         <div className="category">
           {category.strCategory}
+          {/* <img src={category.strCategoryThumb} alt="Category" />
+          <div className="cat-name tooltip">
+            <span className="category-desc tooltiptext">{category.strCategoryDescription}</span>
+          </div> */}
         </div>
       </button>
     ))

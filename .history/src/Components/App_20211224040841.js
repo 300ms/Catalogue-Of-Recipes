@@ -7,7 +7,7 @@ import {
   categories, searchRecipeByID, categoryRecipes,
 } from '../Actions/Index';
 
-function App({ state }) {
+function App({ state, dispatch }) {
   const { recipes } = state;
   useEffect(() => {
     categoryRecipes('Beef');
@@ -30,15 +30,15 @@ function App({ state }) {
 
   return (
     <main>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={(e) => dispatch(handleSubmit(e))}>
         <input placeholder="Search meal by main ingredient (e.g. Chicken Breast) and area (e.g. American, Canadian)" name="by-cat-and-area" />
         <button type="submit">
           <span>Search</span>
         </button>
       </form>
 
-      <CategoryFilter handleClick={(e) => handleClick(e)} />
-      <Recipes recipes={recipes} clickOnRecipeDetail={(e) => clickOnRecipeDetail(e)} />
+      <CategoryFilter handleClick={handleClick} />
+      <Recipes recipes={recipes} clickOnRecipeDetail={(e) => dispatch(clickOnRecipeDetail(e))} />
     </main>
   );
 }
@@ -52,10 +52,9 @@ const mapStateToProps = (state) => ({
 //   clickOnRecipeDetail: () => dispatch(searchRecipeByID()),
 // });
 
-export default connect(mapStateToProps, {
-  categoryRecipes, categories, searchRecipeByID, /* fetchByIngridient, fetchByArea, */
-})(App);
+export default connect(mapStateToProps)(App);
 
 App.propTypes = {
   state: PropTypes.instanceOf(Object).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };

@@ -47,14 +47,12 @@ const mapStateToProps = (state) => ({
   state,
 });
 
-// const mapDispatchToProps = (dispatch) => ({
-//   handleClick: () => dispatch(categoryRecipes()),
-//   clickOnRecipeDetail: () => dispatch(searchRecipeByID()),
-// });
+const mapDispatchToProps = (dispatch) => ({
+  handleClick: () => dispatch(categoryRecipes()),
+  clickOnRecipeDetail: () => dispatch(searchRecipeByID()),
+});
 
-export default connect(mapStateToProps, {
-  categoryRecipes, categories, searchRecipeByID, /* fetchByIngridient, fetchByArea, */
-})(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 App.propTypes = {
   state: PropTypes.instanceOf(Object).isRequired,

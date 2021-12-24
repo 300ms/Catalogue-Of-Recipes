@@ -19,11 +19,14 @@ const searchRecipeByID = (recipeID) => (dispatch) => getByID(recipeID)
   }));
 
 const categoryRecipes = (category) => (dispatch) => getByCategory(category)
-  .then((response) => dispatch({
-    type: RECIPES,
-    payload: response.data.meals,
-  }))
-  .catch((err) => console.error(err));
+  .then((response) => {
+    dispatch({
+      type: RECIPES,
+      payload: response.data.meals,
+    });
+    console.log('action');
+  })
+  .catch((err) => console.log(err));
 
 const changeFilter = (filter) => ({
   type: CHANGE_FILTER,

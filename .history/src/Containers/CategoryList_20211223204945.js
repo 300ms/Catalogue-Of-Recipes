@@ -1,13 +1,17 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const CategoryList = ({ state, handleClick }) => {
+const CategoryList = ({ state, handleChange }) => {
   const { categories } = state;
   return (
     categories.map((category) => (
-      <button type="button" onClick={() => handleClick(category.strCategory)} key={category.idCategory} className="cat-item">
+      <button type="button" onClick={() => handleChange(category.strCategory)} key={category.idCategory} className="cat-item">
         <div className="category">
           {category.strCategory}
+          {/* <img src={category.strCategoryThumb} alt="Category" />
+          <div className="cat-name tooltip">
+            <span className="category-desc tooltiptext">{category.strCategoryDescription}</span>
+          </div> */}
         </div>
       </button>
     ))

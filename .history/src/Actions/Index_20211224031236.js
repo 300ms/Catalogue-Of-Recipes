@@ -18,12 +18,23 @@ const searchRecipeByID = (recipeID) => (dispatch) => getByID(recipeID)
     payload: response.data.meals,
   }));
 
+// const categoryRecipes = (category) => (dispatch) => getByCategory(category)
+//   .then((response) => {
+//     dispatch({
+//       type: RECIPES,
+//       payload: response.data.meals,
+//     });
+//     console.log('action');
+//   });
+
 const categoryRecipes = (category) => (dispatch) => getByCategory(category)
-  .then((response) => dispatch({
-    type: RECIPES,
-    payload: response.data.meals,
-  }))
-  .catch((err) => console.error(err));
+  .then((response) => {
+    dispatch({
+      type: RECIPES,
+      payload: response.data.meals,
+    });
+    console.log('asd');
+  });
 
 const changeFilter = (filter) => ({
   type: CHANGE_FILTER,

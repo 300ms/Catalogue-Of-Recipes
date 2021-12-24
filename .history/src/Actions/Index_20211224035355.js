@@ -23,7 +23,7 @@ const categoryRecipes = (category) => (dispatch) => getByCategory(category)
     type: RECIPES,
     payload: response.data.meals,
   }))
-  .catch((err) => console.error(err));
+  .catch((err) => console.log(err));
 
 const changeFilter = (filter) => ({
   type: CHANGE_FILTER,

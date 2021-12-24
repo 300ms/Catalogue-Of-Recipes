@@ -37,8 +37,8 @@ function App({ state }) {
         </button>
       </form>
 
-      <CategoryFilter handleClick={(e) => handleClick(e)} />
-      <Recipes recipes={recipes} clickOnRecipeDetail={(e) => clickOnRecipeDetail(e)} />
+      <CategoryFilter handleClick={handleClick} />
+      <Recipes recipes={recipes} clickOnRecipeDetail={clickOnRecipeDetail} />
     </main>
   );
 }
@@ -47,14 +47,13 @@ const mapStateToProps = (state) => ({
   state,
 });
 
-// const mapDispatchToProps = (dispatch) => ({
-//   handleClick: () => dispatch(categoryRecipes()),
-//   clickOnRecipeDetail: () => dispatch(searchRecipeByID()),
-// });
+const mapDispatchToProps = (dispatch) => ({
+  categoryRecipes: () => dispatch(categoryRecipes()),
+  categories: () => dispatch(categories()),
+  searchRecipeByID: () => dispatch(searchRecipeByID()),
+});
 
-export default connect(mapStateToProps, {
-  categoryRecipes, categories, searchRecipeByID, /* fetchByIngridient, fetchByArea, */
-})(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 App.propTypes = {
   state: PropTypes.instanceOf(Object).isRequired,
