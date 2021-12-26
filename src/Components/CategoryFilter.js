@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CategoryFilter = ({ onChange, value }) => {
+function CategoryFilter({ onChange, value }) {
   const categories = ['Pasta', 'Pork', 'Seafood', 'Beef', 'Chicken', 'Dessert', 'Lamb', 'Side', 'Starter', 'Vegan', 'Vegetarian', 'Breakfast', 'Miscellaneous', 'Goat'];
   return (
     <div className="category-filter">
@@ -12,7 +12,7 @@ const CategoryFilter = ({ onChange, value }) => {
       </select>
     </div>
   );
-};
+}
 
 CategoryFilter.propTypes = {
   onChange: PropTypes.func.isRequired,

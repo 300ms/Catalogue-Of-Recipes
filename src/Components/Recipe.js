@@ -3,11 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RecipeImage from './RecipeImage';
 
-const Recipe = ({
+function Recipe({
   src, name,
-}) => (
-  <RecipeImage className="category" src={src} name={name} alt={name} />
-);
+}) {
+  return <RecipeImage className="category" src={src} name={name} alt={name} />;
+}
 
 Recipe.propTypes = {
   src: PropTypes.string.isRequired,

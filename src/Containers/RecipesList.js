@@ -9,7 +9,7 @@ import getRecipe from '../Actions/singleRecipe';
 import { getProductsError, getProducts, getProductsPending } from '../Constants/Index';
 import { updateCategory } from '../Actions/index';
 
-const RecipesList = (props) => {
+function RecipesList(props) {
   const {
     products, pending, fetchAllMeals, category,
   } = props;
@@ -33,7 +33,7 @@ const RecipesList = (props) => {
       </div>
     </div>
   );
-};
+}
 
 RecipesList.defaultProps = {
   products: [''],

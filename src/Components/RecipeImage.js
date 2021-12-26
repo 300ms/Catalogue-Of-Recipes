@@ -2,14 +2,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RecipeImage = ({
+function RecipeImage({
   className, src, name,
-}) => (
-  <div className={className}>
-    <img className="recipe-img" src={src} alt={name} />
-    <h1 className="top-text">{name}</h1>
-  </div>
-);
+}) {
+  return (
+    <div className={className}>
+      <img className="recipe-img" src={src} alt={name} />
+      <h1 className="top-text">{name}</h1>
+    </div>
+  );
+}
 
 RecipeImage.defaultProps = {
   className: 'w-50',

@@ -7,15 +7,17 @@ import RecipeDetails from '../Containers/RecipeDetails';
 import Nav from '../Containers/Nav';
 import Categories from '../Containers/AllCategories';
 
-const App = () => (
-  <div>
-    <Nav />
-    <Switch>
-      <Route path="/" component={Categories} exact />
-      <Route path="/category/:category" component={AllRecipes} />
-      <Route path="/meal/:id" component={RecipeDetails} />
-    </Switch>
-  </div>
-);
+function App() {
+  return (
+    <div>
+      <Nav />
+      <Switch>
+        <Route path="/" component={Categories} exact />
+        <Route path="/category/:category" component={AllRecipes} />
+        <Route path="/meal/:id" component={RecipeDetails} />
+      </Switch>
+    </div>
+  );
+}
 
 export default App;

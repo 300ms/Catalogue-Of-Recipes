@@ -3,33 +3,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
-const RecipeDetails = ({
+function RecipeDetails({
   category, area, ingredients, className,
-}) => (
-  <div className={className}>
-    <p>
-      <span className="prop-title">
-        Category&nbsp;:&nbsp;
-      </span>
-      <span>
-        {category}
-      </span>
-    </p>
-    <hr />
-    <p>
-      <span className="prop-title">
-        Area&nbsp;:&nbsp;
-      </span>
-      <span>
-        {area}
-      </span>
-    </p>
-    <hr />
-    <p className="prop-title">
-      Ingredients&nbsp;;&nbsp;
-    </p>
+}) {
+  return (
+    <div className={className}>
+      <p>
+        <span className="prop-title">
+          Category&nbsp;:&nbsp;
+        </span>
+        <span>
+          {category}
+        </span>
+      </p>
+      <hr />
+      <p>
+        <span className="prop-title">
+          Area&nbsp;:&nbsp;
+        </span>
+        <span>
+          {area}
+        </span>
+      </p>
+      <hr />
+      <p className="prop-title">
+        Ingredients&nbsp;;&nbsp;
+      </p>
 
-    {
+      {
       ingredients.map((ingredient, index) => {
         if (index < ingredients.length - 1) {
           return (
@@ -47,9 +48,10 @@ const RecipeDetails = ({
         );
       })
     }
-    <hr />
-  </div>
-);
+      <hr />
+    </div>
+  );
+}
 
 RecipeDetails.defaultProps = {
   className: 'w-50',

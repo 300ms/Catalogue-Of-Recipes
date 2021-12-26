@@ -2,12 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavBar = () => (
-  <div className="nav header">
-    <Link className="home-link" to="/">
-      <h4 className=" nav-text">Catalogue Of Recipes</h4>
-    </Link>
-  </div>
-);
+function NavBar() {
+  return (
+    <div className="nav header">
+      <Link className="home-link" to="/">
+        <h4 className=" nav-text">Catalogue Of Recipes</h4>
+      </Link>
+    </div>
+  );
+}
 
 export default NavBar;

@@ -14,7 +14,7 @@ import {
   categoryImage,
 } from '../Constants/Index';
 
-const AllCategories = (props) => {
+function AllCategories(props) {
   const { getCategories, categories } = props;
   useEffect(() => {
     getCategories();
@@ -27,7 +27,7 @@ const AllCategories = (props) => {
       </div>
     </div>
   );
-};
+}
 
 AllCategories.propTypes = {
   categories: PropTypes.arrayOf(object).isRequired,

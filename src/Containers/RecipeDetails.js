@@ -11,7 +11,7 @@ import {
   getImg, getArea, getInstructions, getIngredient, getName, categoryName, getProductsPending,
 } from '../Constants/Index';
 
-const RecipeDetails = (props) => {
+function RecipeDetails(props) {
   const {
     img, area, ingredients, match, fetchMeal, name, category, pending, resetSelected,
   } = props;
@@ -38,7 +38,7 @@ const RecipeDetails = (props) => {
       </div>
     </div>
   );
-};
+}
 
 const mapStateToProps = (state) => {
   const { singleMeal } = state;
