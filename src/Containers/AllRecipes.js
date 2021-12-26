@@ -8,7 +8,7 @@ import { getProductsPending } from '../Constants/Index';
 import { updateCategory } from '../Actions/index';
 import RecipesList from './RecipesList';
 
-const AllRecipes = (props) => {
+function AllRecipes(props) {
   const {
     addFilter, match, current, fetchAllMeals,
   } = props;
@@ -32,7 +32,7 @@ const AllRecipes = (props) => {
       <RecipesList category={category} />
     </div>
   );
-};
+}
 
 AllRecipes.defaultProps = {
   category: 'Beef',
