@@ -1,3 +1,5 @@
+import { FETCH_PRODUCTS_ERROR, FETCH_MEAL_SUCCESS, RESET } from '../Constants/Types';
+
 const initialState = {
   pending: false,
   details: {},
@@ -6,19 +8,19 @@ const initialState = {
 
 const RecipeDetails = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_MEAL_SUCCESS':
+    case FETCH_MEAL_SUCCESS:
       return {
         ...state,
         pending: false,
         details: action.details,
       };
-    case 'FETCH_PRODUCTS_ERROR':
+    case FETCH_PRODUCTS_ERROR:
       return {
         ...state,
         pending: false,
         error: action.error,
       };
-    case 'RESET':
+    case RESET:
       return initialState;
     default:
       return state;

@@ -4,7 +4,6 @@ body {
   background-image: url('./Assets/images/image.jpg');
   background-position: center;
   background-size: cover;
-  background-repeat: 'no-repeat';
 }
 
 #root {
@@ -13,7 +12,7 @@ body {
 }
 
 a {
-  color: Black;
+  color: black;
 }
 
 body a:hover {
@@ -95,7 +94,7 @@ button:focus {
 
 .top-text {
   width: 100%;
-  color: #000000;
+  color: #000;
   display: inline-block;
   font-size: 120%;
   text-decoration: none;
@@ -185,5 +184,5 @@ button:focus {
 
 .prop-title {
   font-weight: bold;
-  font-size: 1.2em
+  font-size: 1.2em;
 }

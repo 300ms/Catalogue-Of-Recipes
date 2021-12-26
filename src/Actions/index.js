@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import {
   FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR, UPDATE_CATEGORY, FETCH_MEAL_SUCCESS, FETCH_CATEGORIES_SUCCESS, RESET,
-} from './Types';
+} from '../Constants/Types';
 
 const getRecipesSuccess = (products) => ({
   type: FETCH_PRODUCTS_SUCCESS,
