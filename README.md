@@ -12,7 +12,7 @@
 
   <h3 align="center">React&Redux Catalogue of Recipes Project</h3>
   <p align="center">
-    <img src="https://i.ibb.co/6RTBD9P/SS.png" alt="Logo" width="240" height="240">
+    <img src="https://i.ibb.co/6RTBD9P/SS.png" alt="Logo" width="360" height="240">
   </p>
   <p align="center">
     Microverse Full-Stack Web Development Education
