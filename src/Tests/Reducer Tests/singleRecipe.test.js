@@ -1,4 +1,4 @@
-import recipeDetails from '../../Reducers/recipeDetails';
+import recipeDetails from '../../Reducers/RecipeDetails';
 
 import {
   FETCH_MEAL_SUCCESS,
