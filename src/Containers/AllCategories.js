@@ -1,8 +1,7 @@
-/* eslint-disable react/forbid-prop-types */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import getCategories from '../Actions/categories';
 import Category from '../Components/Category';
 import {
@@ -29,7 +28,14 @@ function AllCategories(props) {
 }
 
 AllCategories.propTypes = {
-  categories: PropTypes.arrayOf(object).isRequired,
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      idCategory: PropTypes.string.isRequired,
+      strCategory: PropTypes.string.isRequired,
+      strCategoryDescription: PropTypes.string.isRequired,
+      strCategoryThumb: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
   getCategories: PropTypes.func.isRequired,
 };
 
